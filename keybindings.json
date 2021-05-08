@@ -1,69 +1,45 @@
+// https://code.visualstudio.com/api/references/when-clause-contexts
+
 [
-    {
-        "key": "cmd+enter",
-        "command": "jupyter.execSelectionInteractive",
-        "when": "editorTextFocus && jupyter.featureenabled && jupyter.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
-    },
-    {
-        "key": "shift+enter",
-        "command": "-jupyter.execSelectionInteractive",
-        "when": "editorTextFocus && jupyter.featureenabled && jupyter.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
-    },
-    {
-        "key": "cmd+enter",
-        "command": "python.execSelectionInTerminal",
-        "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
-    },
-    {
-        "key": "shift+enter",
-        "command": "-python.execSelectionInTerminal",
-        "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
-    },
+    // r keyboard shortucuts
     {
         "key": "shift+cmd+l",
-        "command": "r.loadAll"
+        "command": "r.loadAll",
+        "when": "editorLangId == 'r'"
     },
     {
         "key": "shift+cmd+b",
-        "command": "r.build"
+        "command": "r.build",
+        "when": "editorLangId == 'r'"
     },
     {
         "key": "shift+cmd+t",
-        "command": "r.test"
+        "command": "r.test",
+        "when": "editorLangId == 'r'"
     },
-    {
-        "key": "shift+cmd+t",
-        "command": "python.runtests"
-    },
-    {
-        "key": "shift+cmd+t",
-        "command": "-workbench.action.reopenClosedEditor"
-    },
-    {
-        "key": "cmd+enter",
-        "command": "editor.debug.action.selectionToRepl"
-    },
-    {
-        "key": "cmd+enter",
-        "command": "workbench.action.terminal.runSelectedText"
-    },
+    // {
+    //     "key": "shift+cmd+t",
+    //     "command": "python.runtests"
+    // },
+    // {
+    //     "key": "shift+cmd+t",
+    //     "command": "-workbench.action.reopenClosedEditor"
+    // },
     // {
     //     "key": "cmd+enter",
     //     "command": "python.execSelectionInTerminal",
     //     "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
     // },
-    // added lorenz start
     {
         "key": "cmd+enter",
         "command": "macros.pythonExecSelectionAndCursorDown",
-        "when": "editorTextFocus && editorLangId == 'python'"
+        "when": "editorTextFocus && !jupyter.ownsSelection && editorLangId == 'python'"
     },
-    // {
-    //         "key": "cmd+enter",
-    //         "command": "macros.pythonExecSelectionJupyterAndCursorDown",
-    //         "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
-    // },
-    // added lorenz end
+    {
+            "key": "cmd+enter",
+            "command": "macros.pythonExecSelectionJupyterAndCursorDown",
+            "when": "editorTextFocus && jupyter.hascodecells && editorLangId == 'python'"
+    },
     {
         "key": "shift+enter",
         "command": "-python.execSelectionInTerminal",
@@ -78,5 +54,36 @@
         "key": "shift+enter",
         "command": "-jupyter.execSelectionInteractive",
         "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
-    }
+    },
+    // {
+    //     "key": "cmd+enter",
+    //     "command": "jupyter.execSelectionInteractive",
+    //     "when": "editorTextFocus && jupyter.featureenabled && jupyter.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
+    // },
+    // {
+    //     "key": "shift+enter",
+    //     "command": "-jupyter.execSelectionInteractive",
+    //     "when": "editorTextFocus && jupyter.featureenabled && jupyter.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
+    // },
+    // {
+    //     "key": "cmd+enter",
+    //     "command": "python.execSelectionInTerminal",
+    //     "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
+    // },
+    // {
+    //     "key": "shift+enter",
+    //     "command": "-python.execSelectionInTerminal",
+    //     "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
+    // },
+
+    // general 
+    // {
+    //     "key": "cmd+enter",
+    //     "command": "editor.debug.action.selectionToRepl"
+    // },
+    // {
+    //     "key": "cmd+enter",
+    //     "command": "workbench.action.terminal.runSelectedText"
+    // },
+
 ]
