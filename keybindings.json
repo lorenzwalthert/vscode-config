@@ -1,5 +1,4 @@
 // https://code.visualstudio.com/api/references/when-clause-contexts
-
 [
     // r keyboard shortucuts
     {
@@ -25,20 +24,20 @@
         "command": "macros.pythonExecSelectionAndCursorDown",
         "when": "editorTextFocus && !jupyter.ownsSelection && editorLangId == 'python' && !inDebugMode"
     },
-    {
-            "key": "cmd+enter",
-            "command": "macros.pythonExecSelectionJupyterAndCursorDown",
-            "when": "editorTextFocus && jupyter.hascodecells && editorLangId == 'python' && !inDebugMode"
+    { // needs macro pythonExecSelectionJupyterAndCursorDown from settings.json
+        "key": "cmd+enter",
+        "command": "macros.pythonExecSelectionJupyterAndCursorDown",
+        "when": "editorTextFocus && jupyter.hascodecells && editorLangId == 'python' && !inDebugMode"
     },
     ////// in debugger
     {
         "key": "cmd+enter",
-        "command": "editor.debug.action.selectionToRepl", 
+        "command": "editor.debug.action.selectionToRepl",
         "when": "editorTextFocus && inDebugMode && editorHasSelection",
     },
-    {
+    { // needs macro pythonExecSelectionDebugAndCursorDown from settings.json
         "key": "cmd+enter",
-        "command": "macros.pythonExecSelectionDebugAndCursorDown", 
+        "command": "macros.pythonExecSelectionDebugAndCursorDown",
         "when": "editorTextFocus && inDebugMode && !editorHasSelection",
     },
     // general 
@@ -47,5 +46,4 @@
         "command": "workbench.action.terminal.runSelectedText",
         "when": "editorLangId !='python' && editorLangId != 'r'"
     },
-
 ]
