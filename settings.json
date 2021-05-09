@@ -4,10 +4,10 @@
     "r.rterm.linux": "",
     "r.rterm.mac": "/Users/lorenz/Library/Python/3.7/bin/radian",
     "r.rterm.option": [""],
-    "r.lsp.path": "/usr/bin/R",
+    "r.rpath.mac": "/usr/bin/R",
 
     // terminal
-    "terminal.integrated.shell.linux": "/bin/bash",
+    "terminal.integrated.defaultProfile.linux": "/bin/bash",
     "terminal.integrated.inheritEnv": false,
 
     // python
@@ -39,7 +39,7 @@
             "cursorDown" 
         ]
     },
-    
+
     // other
     "files.autoSaveDelay": 2,
     "files.autoSave": "onFocusChange",
