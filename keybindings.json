@@ -17,19 +17,7 @@
         "command": "r.test",
         "when": "editorLangId == 'r'"
     },
-    // {
-    //     "key": "shift+cmd+t",
-    //     "command": "python.runtests"
-    // },
-    // {
-    //     "key": "shift+cmd+t",
-    //     "command": "-workbench.action.reopenClosedEditor"
-    // },
-    // {
-    //     "key": "cmd+enter",
-    //     "command": "python.execSelectionInTerminal",
-    //     "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
-    // },
+    //// repl: Cmd + Enter like in RStudio
     // outside debugger
     {
         "key": "cmd+enter",
@@ -41,14 +29,12 @@
             "command": "macros.pythonExecSelectionJupyterAndCursorDown",
             "when": "editorTextFocus && jupyter.hascodecells && editorLangId == 'python' && !inDebugMode"
     },
-    // // in debugger
-    // highlighted
+    // in debugger
     {
         "key": "cmd+enter",
         "command": "editor.debug.action.selectionToRepl", 
         "when": "editorTextFocus && inDebugMode && editorHasSelection",
     },
-    /// not highlighted
     {
         "key": "cmd+enter",
         "command": "macros.pythonExecSelectionDebugAndCursorDown", 
@@ -64,25 +50,15 @@
     //     "command": "jupyter.execSelectionInteractive",
     //     "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
     // },
-    {
-        "key": "shift+enter",
-        "command": "-jupyter.execSelectionInteractive",
-        "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
-    },
     // {
-    //     "key": "cmd+enter",
-    //     "command": "jupyter.execSelectionInteractive",
-    //     "when": "editorTextFocus && jupyter.featureenabled && jupyter.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
+    //     "key": "shift+enter",
+    //     "command": "-jupyter.execSelectionInteractive",
+    //     "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
     // },
     // {
     //     "key": "shift+enter",
     //     "command": "-jupyter.execSelectionInteractive",
     //     "when": "editorTextFocus && jupyter.featureenabled && jupyter.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
-    // },
-    // {
-    //     "key": "cmd+enter",
-    //     "command": "python.execSelectionInTerminal",
-    //     "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
     // },
     // {
     //     "key": "shift+enter",
@@ -91,9 +67,10 @@
     // },
 
     // general 
-    // {
-    //     "key": "cmd+enter",
-    //     "command": "workbench.action.terminal.runSelectedText"
-    // },
+    {
+        "key": "cmd+enter",
+        "command": "workbench.action.terminal.runSelectedText",
+        "when": "editorLangId !='python'"
+    },
 
 ]
