@@ -45,7 +45,7 @@
     {
         "key": "cmd+enter",
         "command": "workbench.action.terminal.runSelectedText",
-        "when": "editorLangId !='python'"
+        "when": "editorLangId !='python' && editorLangId != 'r'"
     },
 
 ]
