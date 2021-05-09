@@ -29,6 +29,20 @@
         "pythonExecSelectionJupyterAndCursorDown": [
             "jupyter.execSelectionInteractive", 
             "cursorDown" 
+        ], 
+        "pythonExecSelectionDebugAndCursorDown": [
+            "cursorEnd",
+            "cursorHome",
+            "cursorEndSelect",
+            "editor.debug.action.selectionToRepl",
+            // "workbench.action.terminal.sendSequence('3')",
+            //"execCopy",
+            //"workbench.debug.action.focusRepl",
+            //"debug.replPaste",
+            // "workbench.debug.action.focusRepl",
+            // "problems.action.paste"
+            // "workbench.debug.action.focusRepl", // "python.execSelectionInTerminal", 
+            "cursorDown" 
         ]
     },
     /// modified lorenz end 

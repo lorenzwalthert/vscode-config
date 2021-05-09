@@ -30,21 +30,35 @@
     //     "command": "python.execSelectionInTerminal",
     //     "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
     // },
+    // outside debugger
     {
         "key": "cmd+enter",
         "command": "macros.pythonExecSelectionAndCursorDown",
-        "when": "editorTextFocus && !jupyter.ownsSelection && editorLangId == 'python'"
+        "when": "editorTextFocus && !jupyter.ownsSelection && editorLangId == 'python' && !inDebugMode"
     },
     {
             "key": "cmd+enter",
             "command": "macros.pythonExecSelectionJupyterAndCursorDown",
-            "when": "editorTextFocus && jupyter.hascodecells && editorLangId == 'python'"
+            "when": "editorTextFocus && jupyter.hascodecells && editorLangId == 'python' && !inDebugMode"
     },
+    // // in debugger
+    // highlighted
     {
-        "key": "shift+enter",
-        "command": "-python.execSelectionInTerminal",
-        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+        "key": "cmd+enter",
+        "command": "editor.debug.action.selectionToRepl", 
+        "when": "editorTextFocus && inDebugMode && editorHasSelection",
     },
+    /// not highlighted
+    {
+        "key": "cmd+enter",
+        "command": "macros.pythonExecSelectionDebugAndCursorDown", 
+        "when": "editorTextFocus && inDebugMode && !editorHasSelection",
+    },
+    // {
+    //     "key": "shift+enter",
+    //     "command": "-python.execSelectionInTerminal",
+    //     "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    // },
     // {
     //     "key": "cmd+enter",
     //     "command": "jupyter.execSelectionInteractive",
@@ -77,10 +91,6 @@
     // },
 
     // general 
-    // {
-    //     "key": "cmd+enter",
-    //     "command": "editor.debug.action.selectionToRepl"
-    // },
     // {
     //     "key": "cmd+enter",
     //     "command": "workbench.action.terminal.runSelectedText"
