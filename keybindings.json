@@ -17,8 +17,9 @@
         "command": "r.test",
         "when": "editorLangId == 'r'"
     },
+    // python
     //// repl: Cmd + Enter like in RStudio
-    // outside debugger
+    ////// outside debugger
     {
         "key": "cmd+enter",
         "command": "macros.pythonExecSelectionAndCursorDown",
@@ -29,7 +30,7 @@
             "command": "macros.pythonExecSelectionJupyterAndCursorDown",
             "when": "editorTextFocus && jupyter.hascodecells && editorLangId == 'python' && !inDebugMode"
     },
-    // in debugger
+    ////// in debugger
     {
         "key": "cmd+enter",
         "command": "editor.debug.action.selectionToRepl", 
@@ -40,32 +41,6 @@
         "command": "macros.pythonExecSelectionDebugAndCursorDown", 
         "when": "editorTextFocus && inDebugMode && !editorHasSelection",
     },
-    // {
-    //     "key": "shift+enter",
-    //     "command": "-python.execSelectionInTerminal",
-    //     "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
-    // },
-    // {
-    //     "key": "cmd+enter",
-    //     "command": "jupyter.execSelectionInteractive",
-    //     "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
-    // },
-    // {
-    //     "key": "shift+enter",
-    //     "command": "-jupyter.execSelectionInteractive",
-    //     "when": "editorTextFocus && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
-    // },
-    // {
-    //     "key": "shift+enter",
-    //     "command": "-jupyter.execSelectionInteractive",
-    //     "when": "editorTextFocus && jupyter.featureenabled && jupyter.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
-    // },
-    // {
-    //     "key": "shift+enter",
-    //     "command": "-python.execSelectionInTerminal",
-    //     "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
-    // },
-
     // general 
     {
         "key": "cmd+enter",

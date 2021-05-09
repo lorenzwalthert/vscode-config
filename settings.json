@@ -1,27 +1,28 @@
-{
+{   // r
     "r.bracketedPaste": true,
     "r.alwaysUseActiveTerminal": true,
     "r.rterm.linux": "",
     "r.rterm.mac": "/Users/lorenz/Library/Python/3.7/bin/radian",
     "r.rterm.option": [""],
     "r.lsp.path": "/usr/bin/R",
+
+    // terminal
     "terminal.integrated.shell.linux": "/bin/bash",
     "terminal.integrated.inheritEnv": false,
+
+    // python
     "python.defaultInterpreterPath": "/Users/lorenz/opt/miniconda3/envs/mlflow-1.11.0/bin/python3.6",
-    "files.autoSaveDelay": 2,
-    "files.autoSave": "onFocusChange",
     "jupyter.interactiveWindowMode": "perFile",
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "python.languageServer": "Pylance",
-    // modified lorenz start:
     "python.terminal.launchArgs": [
         "-m",
         "IPython",
         // "--no-autoindent",
      ],
     
-    "macros": {  // Note: this requires macros extension by publisher:"geddski" 
+    // macros
+    "macros": {  
+        // Note: this requires macros extension by publisher:"geddski" 
         "pythonExecSelectionAndCursorDown": [
             "python.execSelectionInTerminal", 
             "cursorDown" 
@@ -35,32 +36,14 @@
             "cursorHome",
             "cursorEndSelect",
             "editor.debug.action.selectionToRepl",
-            // "workbench.action.terminal.sendSequence('3')",
-            //"execCopy",
-            //"workbench.debug.action.focusRepl",
-            //"debug.replPaste",
-            // "workbench.debug.action.focusRepl",
-            // "problems.action.paste"
-            // "workbench.debug.action.focusRepl", // "python.execSelectionInTerminal", 
             "cursorDown" 
         ]
     },
-    /// modified lorenz end 
-    "docker.host": "ssh://ubuntu@dev-bastion.udl.ai",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "mssql.connections": [
-        {
-            "server": "{{put-server-name-here}}",
-            "database": "{{put-database-name-here}}",
-            "user": "{{put-username-here}}",
-            "password": "{{put-password-here}}"
-        }
-    ]
+    
+    // other
+    "files.autoSaveDelay": 2,
+    "files.autoSave": "onFocusChange",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
 }
