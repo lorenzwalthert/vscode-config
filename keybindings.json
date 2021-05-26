@@ -19,15 +19,27 @@
     // python
     //// repl: Cmd + Enter like in RStudio
     ////// outside debugger
+    //////// outside jupyter code cell
     {
         "key": "cmd+enter",
         "command": "macros.pythonExecSelectionAndCursorDown",
-        "when": "editorTextFocus && !jupyter.ownsSelection && editorLangId == 'python' && !inDebugMode"
+        "when": "editorTextFocus && !jupyter.ownsSelection && !editorHasSelection && editorLangId == 'python' && !inDebugMode"
     },
+    {
+        "key": "cmd+enter",
+        "command": "python.execSelectionInTerminal",
+        "when": "editorTextFocus && !jupyter.ownsSelection && editorHasSelection && editorLangId == 'python' && !inDebugMode"
+    },
+    //////// inside jupyter code cell
     { // needs macro pythonExecSelectionJupyterAndCursorDown from settings.json
         "key": "cmd+enter",
         "command": "macros.pythonExecSelectionJupyterAndCursorDown",
-        "when": "editorTextFocus && jupyter.hascodecells && editorLangId == 'python' && !inDebugMode"
+        "when": "editorTextFocus && jupyter.hascodecells && !editorHasSelection && editorLangId == 'python' && !inDebugMode"
+    },
+    { // needs macro pythonExecSelectionJupyterAndCursorDown from settings.json
+        "key": "cmd+enter",
+        "command": "jupyter.execSelectionInteractive",
+        "when": "editorTextFocus && jupyter.hascodecells && editorHasSelection && editorLangId == 'python' && !inDebugMode"
     },
     ////// in debugger
     {
