@@ -49,4 +49,6 @@
             "filenamePattern": "*.ipynb"
         }
     ],
+    "pylance.insidersChannel": "daily",
+    "tabnine.experimentalAutoImports": true,
 }
