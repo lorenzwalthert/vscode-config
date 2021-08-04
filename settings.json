@@ -1,24 +1,20 @@
-{ // r
-    "r.bracketedPaste": true,
-    "r.alwaysUseActiveTerminal": true,
-    "r.rterm.linux": "",
-    "r.rterm.mac": "/Users/lorenz/Library/Python/3.7/bin/radian",
-    "r.rterm.option": [
-        ""
-    ],
-    "r.rpath.mac": "/usr/bin/R",
-    // terminal
-    "terminal.integrated.defaultProfile.linux": "/bin/bash",
-    "terminal.integrated.inheritEnv": false,
-    // python
-    "python.defaultInterpreterPath": "/Users/lorenz/opt/miniconda3/envs/mlflow-1.11.0/bin/python3.6",
+{   
+    "debug.console.wordWrap": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.suggestSelection": "first",
+    "files.autoSaveDelay": 2,
+    "files.autoSave": "onFocusChange",
+
+    // jupyter
+    "jupyter.askForKernelRestart": false,
     "jupyter.interactiveWindowMode": "perFile",
-    "python.languageServer": "Pylance",
-    "python.terminal.launchArgs": [
-        "-m",
-        "IPython",
-        // "--no-autoindent",
-    ],
+    
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+
+    
     // macros
     "macros": {
         // Note: this requires macros extension by publisher:"geddski" 
@@ -38,17 +34,38 @@
             "cursorDown"
         ]
     },
-    // other
-    "files.autoSaveDelay": 2,
-    "files.autoSave": "onFocusChange",
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    
+    // python
     "pylance.insidersChannel": "daily",
+    "python.languageServer": "Pylance",
+    "python.terminal.launchArgs": [
+        "-m",
+        "IPython",
+        "--no-autoindent",
+        "--no-confirm-exit"
+    ],
+
+    // r
+    "r.bracketedPaste": true,
+    "r.alwaysUseActiveTerminal": true,
+    "r.rterm.linux": "",
+    "r.rterm.mac": "/Users/lorenz/Library/Python/3.7/bin/radian",
+    "r.rterm.option": [
+        ""
+    ],
+    "r.rpath.mac": "/usr/bin/R",
+    
+    "security.workspace.trust.untrustedFiles": "open",
     "tabnine.experimentalAutoImports": true,
+    // terminal
+    "terminal.integrated.defaultProfile.linux": "/bin/bash",
+    "terminal.integrated.inheritEnv": false,
+    
+    // other
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editor.enablePreview": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "window.zoomLevel": 1,
 }
